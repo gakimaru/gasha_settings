@@ -14,18 +14,12 @@ Released under the [MIT license][MIT].
 > 
 > 基本的に、ライブラリの利用者が、プロジェクト専用ブランチで直接編集を行います。
 > 
-> **リポジトリ構成**
+> **関連リポジトリ**
 > * [`gasha` ライブラリ本体用リポジトリ][gasha]  
->   ヘッダーファイルとライブラリファイル  
 > * [`gasha_settings` ライブラリ挙動設定用リポジトリ][gasha_settings]  
->   プロジェクト固有の挙動設定用のヘッダーファイル  
 > * [`gasha_src` ライブラリソース用リポジトリ][gasha_src]  
->   ライブラリのソースファイルとビルド用プロジェクト  
 > * [`gasha_examples` サンプルプログラム用リポジトリ][gasha_examples]  
->   多数のサンプルプログラム用プロジェクト  
->   ライブラリとソースをサブモジュール配置  
 > * [`gasha_proj` ライブラリビルド用リポジトリ][gasha_proj]  
->   ライブラリとソースをサブモジュール配置  
 [gasha]: https://github.com/gakimaru/gasha
 [gasha_settings]: https://github.com/gakimaru/gasha_settings
 [gasha_src]: https://github.com/gakimaru/gasha_src
