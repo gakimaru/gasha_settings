@@ -13,13 +13,13 @@ Released under the [MIT license][MIT].
 > 特定プロジェクト向けにライブラリの挙動を設定するために使用します。  
 > 
 > 基本的に、ライブラリの利用者が、プロジェクト専用ブランチで直接編集を行います。
-> 
-> **関連リポジトリ**
-> * [`gasha` ライブラリ本体用リポジトリ][gasha]  
-> * [`gasha_settings` ライブラリ挙動設定用リポジトリ][gasha_settings]  
-> * [`gasha_src` ライブラリソース用リポジトリ][gasha_src]  
-> * [`gasha_examples` サンプルプログラム用リポジトリ][gasha_examples]  
-> * [`gasha_proj` ライブラリビルド用リポジトリ][gasha_proj]  
+
+**関連リポジトリ**
+* [`gasha` ライブラリ本体用リポジトリ][gasha]  
+* [`gasha_settings` ライブラリ挙動設定用リポジトリ][gasha_settings]  
+* [`gasha_src` ライブラリソース用リポジトリ][gasha_src]  
+* [`gasha_examples` サンプルプログラム用リポジトリ][gasha_examples]  
+* [`gasha_proj` ライブラリビルド用リポジトリ][gasha_proj]  
 [gasha]: https://github.com/gakimaru/gasha
 [gasha_settings]: https://github.com/gakimaru/gasha_settings
 [gasha_src]: https://github.com/gakimaru/gasha_src
