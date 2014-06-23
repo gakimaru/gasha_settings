@@ -19,14 +19,16 @@
 //SSE命令設定
 #ifdef IS_X86//x86,x64系CPUの場合のみ設定可
 //※使用するバージョン以前のマクロは全て有効化すること
-#define USE_SSE//SSE使用
-#define USE_SSE2//SSE2使用
-#define USE_SSE3//SSE3使用
-#define USE_SSE4//SSE4使用
-#define USE_SSE4_1//SSE4.1使用
-#define USE_SSE4_2//SSE4.2使用
-#define USE_AVX//AVX使用
-//#define USE_AVX2//AVX2使用
+#define USE_SSE//SSE命令を使用
+#define USE_SSE2//SSE2命令を使用
+#define USE_SSE3//SSE3命令を使用
+//#define USE_SSE4A//SSE4a命令(AMD)を使用
+#define USE_SSE4_1//SSE4.1命令を使用
+#define USE_SSE4_2//SSE4.2命令を使用
+#define USE_POPCNT//POPCNT命令を使用
+#define USE_AES//AES命令を使用
+#define USE_AVX//AVX命令を使用
+//#define USE_AVX2//AVX2命令を使用
 #endif//IS_X86
 
 //--------------------------------------------------------------------------------

@@ -17,7 +17,7 @@
 //※プロジェクトの都合により、ライブラリのネームスペースを変更もしくは削除したい場合は、
 //　このマクロを書き換えて使用する
 
-#define USE_NAME_SPACE_GASHA//GASHA用のネームスペースを使用する場合、このマクロを有効化すうｒ
+#define USE_NAME_SPACE_GASHA//GASHA用のネームスペースを使用する場合、このマクロを有効化する
 
 #ifdef USE_NAME_SPACE_GASHA//以下、ネームスペースを使用する場合
 
@@ -42,6 +42,8 @@
 	#define GASHA_//ネームスペース指定
 
 #endif//USE_NAME_SPACE_GASHA
+
+#define INCLUDE_GASHA(file) <gasha/file> //インクルード
 
 #endif//__PROJECT_BUILD_SETTINGS_FIRST_H_
 
