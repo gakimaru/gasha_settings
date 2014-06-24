@@ -26,7 +26,7 @@
 	#define NAMESPACE_GASHA_BEGIN namespace NAMESPACE_NAME_GASHA {//ネームスペース開始宣言
 	#define NAMESPACE_GASHA_END }//ネームスペース終了宣言
 
-	#define USING_NAMESPACE_GASHA using namespace NAMESPACE_NAME_GASHA;//ネームスペース使用宣言
+	#define USING_NAMESPACE_GASHA using namespace NAMESPACE_NAME_GASHA//ネームスペース使用宣言
 	
 	#define GASHA_ NAMESPACE_NAME_GASHA:://ネームスペース指定
 
@@ -37,7 +37,7 @@
 	#define NAMESPACE_GASHA_BEGIN//ネームスペース開始宣言
 	#define NAMESPACE_GASHA_END//ネームスペース終了宣言
 
-	#define USING_NAMESPACE_GASHA//ネームスペース使用宣言
+	#define USING_NAMESPACE_GASHA;//ネームスペース使用宣言
 
 	#define GASHA_//ネームスペース指定
 
