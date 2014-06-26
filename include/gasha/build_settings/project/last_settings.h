@@ -65,6 +65,13 @@
 
 #endif//_OPENMP
 
+//--------------------------------------------------------------------------------
+//コンテナ設定：双方向連結リスト
+
+#define GASHA_LINKED_LIST_ENABLE_BINARY_SEARCH//二分探索を有効にする
+#define GASHA_LINKED_LIST_ENABLE_STABLE_SORT//安定ソートを有効にする
+#define GASHA_LINKED_LIST_USE_SHELL_SORT//通常ソートにシェルソートを使用する（無効化時は挿入ソートを使用）
+
 #endif//__PROJECT_BUILD_SETTINGS_LAST_H_
 
 // End of file
