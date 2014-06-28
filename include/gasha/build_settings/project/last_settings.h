@@ -180,7 +180,7 @@
 //#define GASHA_HASH_TABLE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 #define GASHA_HASH_TABLE_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
-#define GASHA_HASH_TABLE_ENABLE_REVERSE_ITERATOR//リバースイテレータを有効にする場合は、このマクロを有効にする【注意】かなりの低速処理
+#define GASHA_HASH_TABLE_ENABLE_REVERSE_ITERATOR//リバースイテレータを有効にする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：二分ヒープコンテナ】
@@ -188,6 +188,9 @@
 
 //#define GASHA_BINARY_HEAP_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
 //#define GASHA_BINARY_HEAP_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
+#define GASHA_BINARY_HEAP_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
+#define GASHA_BINARY_HEAP_ENABLE_REVERSE_ITERATOR//リバースイテレータを有効にする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：優先度付きキューコンテナアダプタ】
