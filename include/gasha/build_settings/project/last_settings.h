@@ -20,19 +20,27 @@
 //※ライブラリの再ビルド必要
 
 #ifdef GASHA_IS_X86//x86,x64系CPUの場合のみ設定可
-
-	//※基本的に、使用するバージョン以前のマクロは全て有効にする
 	
-	#define GASHA_USE_SSE//SSE命令を使用する場合、このマクロを有効にする
-	#define GASHA_USE_SSE2//SSE2命令を使用する場合、このマクロを有効にする
-	#define GASHA_USE_SSE3//SSE3命令を使用する場合、このマクロを有効にする
-	//#define GASHA_USE_SSE4A//SSE4a命令(AMD)を使用する場合、このマクロを有効にする
-	#define GASHA_USE_SSE4_1//SSE4.1命令を使用する場合、このマクロを有効にする
-	#define GASHA_USE_SSE4_2//SSE4.2命令を使用する場合、このマクロを有効にする
+	//#define GASHA_USE_SSE//SSE命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_SSE2//SSE2命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_SSE3//SSE3命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_SSE4A//SSE4a命令セット(AMD)を使用する場合、このマクロを有効にする
+	//#define GASHA_USE_SSE4_1//SSE4.1命令セットを使用する場合、このマクロを有効にする
+	#define GASHA_USE_SSE4_2//SSE4.2命令セットを使用する場合、このマクロを有効にする
 	#define GASHA_USE_POPCNT//POPCNT命令を使用する場合、このマクロを有効にする
-	#define GASHA_USE_AES//AES命令を使用する場合、このマクロを有効にする
-	#define GASHA_USE_AVX//AVX命令を使用する場合、このマクロを有効にする
-	//#define GASHA_USE_AVX2//AVX2命令を使用する場合、このマクロを有効にする
+	//#define GASHA_USE_AES//AES命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_AVX//AVX命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_AVX2//AVX2命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_FMA4//FMA4命令セット(AMD)を使用する場合、このマクロを有効にする
+	//#define GASHA_USE_FMA3//FMA3命令セット(INTEL)を使用する場合、このマクロを有効にする
+
+	//※一つ一つ指定しなくても、使用するバージョン以前の命令セットは自動的に有効化される。
+	//　ただし、以下の指定は他の命令セットの有効化に影響しないので、個別に有効化する必要がある。
+	//　・SSE4A
+	//　・POPCNT
+	//　・AES
+	//　・FMA4
+	//　・FMA3
 
 #endif//GASHA_IS_X86
 
