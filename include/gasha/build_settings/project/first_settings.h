@@ -3,7 +3,7 @@
 #define __PROJECT_BUILD_SETTINGS_FIRST_H_
 
 //--------------------------------------------------------------------------------
-// project_build_settings_first.h
+// first_settings.h
 // プロジェクト固有のコンパイル設定（先行設定）
 //
 // Gakimaru's researched and standard library for C++ - GASHA

@@ -3,8 +3,8 @@
 #define __PROJECT_BUILD_SETTINGS_LAST_H_
 
 //--------------------------------------------------------------------------------
-// project_build_settings.h
-// プロジェクト固有のコンパイル設定
+// last_settings.h
+// プロジェクト固有のコンパイル設定（最終設定）
 //
 // Gakimaru's researched and standard library for C++ - GASHA
 //   Copyright (c) 2014 Itagaki Mamoru
