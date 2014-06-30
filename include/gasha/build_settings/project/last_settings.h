@@ -173,10 +173,11 @@
 //#define GASHA_RB_TREE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 #define GASHA_RB_TREE_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
-#define GASHA_RB_TREE_DISABLE_COLOR_FOR_ADD//ノード追加時の色操作と回転処理を無効にする場合は、このマクロを有効にする
-#define GASHA_RB_TREE_DISABLE_COLOR_FOR_REMOVE//ノード削除時の色操作と回転処理を無効にする場合は、このマクロを有効にする
-#define GASHA_RB_TREE_USE_DEBUG_PRINT_FOR_ADD//ノード追加時のデバッグ情報表示を使用する場合は、このマクロを有効にする
-#define GASHA_RB_TREE_USE_DEBUG_PRINT_FOR_REMOVE//ノード削除時のデバッグ情報表示を使用する場合は、このマクロを有効にする
+
+//#define GASHA_RB_TREE_DISABLE_COLOR_FOR_ADD//ノード追加時の色操作と回転処理を無効にする場合は、このマクロを有効にする
+//#define GASHA_RB_TREE_DISABLE_COLOR_FOR_REMOVE//ノード削除時の色操作と回転処理を無効にする場合は、このマクロを有効にする
+//#define GASHA_RB_TREE_USE_DEBUG_PRINT_FOR_ADD//ノード追加時のデバッグ情報表示を使用する場合は、このマクロを有効にする
+//#define GASHA_RB_TREE_USE_DEBUG_PRINT_FOR_REMOVE//ノード削除時のデバッグ情報表示を使用する場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：開番地法ハッシュテーブルコンテナ】
