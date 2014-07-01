@@ -1,6 +1,6 @@
 ﻿#pragma once
-#ifndef __PROJECT_BUILD_SETTINGS_LAST_H_
-#define __PROJECT_BUILD_SETTINGS_LAST_H_
+#ifndef GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_LAST_H
+#define GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_LAST_H
 
 //--------------------------------------------------------------------------------
 // last_settings.h
@@ -206,6 +206,6 @@
 //#define GASHA_PRIORITY_QUEUE_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
 //#define GASHA_PRIORITY_QUEUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
-#endif//__PROJECT_BUILD_SETTINGS_LAST_H_
+#endif//GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_LAST_H
 
 // End of file

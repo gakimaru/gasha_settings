@@ -1,6 +1,6 @@
 ﻿#pragma once
-#ifndef __PROJECT_BUILD_SETTINGS_FIRST_H_
-#define __PROJECT_BUILD_SETTINGS_FIRST_H_
+#ifndef GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_FIRST_H
+#define GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_FIRST_H
 
 //--------------------------------------------------------------------------------
 // first_settings.h
@@ -43,6 +43,6 @@
 
 #endif//GASHA_USE_NAME_SPACE
 
-#endif//__PROJECT_BUILD_SETTINGS_FIRST_H_
+#endif//GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_FIRST_H
 
 // End of file
