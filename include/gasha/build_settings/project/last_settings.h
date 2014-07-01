@@ -156,8 +156,8 @@
 
 #define GASHA_LINKED_LIST_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
 #define GASHA_LINKED_LIST_ENABLE_BINARY_SEARCH//コンテナの二分探索メソッドを有効にする場合は、このマクロを有効にする
-#define GASHA_LINKED_LIST_ENABLE_STABLE_SORT//安定ソートメソッドを有効にする場合は、このマクロを有効にする
-#define GASHA_LINKED_LIST_USE_SHELL_SORT//通常ソートにシェルソートを使用する場合は、このマクロを有効にする（無効化時は挿入ソートを使用）
+//#define GASHA_LINKED_LIST_ENABLE_STABLE_SORT//安定ソートメソッドを有効にする場合は、このマクロを有効にする
+//#define GASHA_LINKED_LIST_USE_SHELL_SORT//通常ソートにシェルソートを使用する場合は、このマクロを有効にする（無効化時は挿入ソートを使用）
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：片方向連結リストコンテナ】
@@ -169,7 +169,7 @@
 #define GASHA_SINGLY_LINKED_LIST_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
 #define GASHA_SINGLY_LINKED_LIST_ENABLE_REVERSE_ITERATOR//リバースイテレータを有効にする場合は、このマクロを有効にする【注意】かなりの低速処理
 #define GASHA_SINGLY_LINKED_LIST_ENABLE_BINARY_SEARCH//コンテナの二分探索メソッドを有効にする場合は、このマクロを有効にする ※リバースイテレータ無効化時は無効
-#define GASHA_SINGLY_LINKED_LIST_ENABLE_STABLE_SORT//安定ソートメソッドを有効にする場合は、このマクロを有効にする
+//#define GASHA_SINGLY_LINKED_LIST_ENABLE_STABLE_SORT//安定ソートメソッドを有効にする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：赤黒木コンテナ】
