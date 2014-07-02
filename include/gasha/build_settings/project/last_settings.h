@@ -26,10 +26,10 @@
 	//#define GASHA_USE_SSE3//SSE3命令セットを使用する場合、このマクロを有効にする
 	//#define GASHA_USE_SSE4A//SSE4a命令セット(AMD)を使用する場合、このマクロを有効にする
 	//#define GASHA_USE_SSE4_1//SSE4.1命令セットを使用する場合、このマクロを有効にする
-	#define GASHA_USE_SSE4_2//SSE4.2命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_SSE4_2//SSE4.2命令セットを使用する場合、このマクロを有効にする
 	#define GASHA_USE_POPCNT//POPCNT命令を使用する場合、このマクロを有効にする
-	//#define GASHA_USE_AES//AES命令セットを使用する場合、このマクロを有効にする
-	//#define GASHA_USE_AVX//AVX命令セットを使用する場合、このマクロを有効にする
+	#define GASHA_USE_AES//AES命令セットを使用する場合、このマクロを有効にする
+	#define GASHA_USE_AVX//AVX命令セットを使用する場合、このマクロを有効にする
 	//#define GASHA_USE_AVX2//AVX2命令セットを使用する場合、このマクロを有効にする
 	//#define GASHA_USE_FMA4//FMA4命令セット(AMD)を使用する場合、このマクロを有効にする
 	//#define GASHA_USE_FMA3//FMA3命令セット(INTEL)を使用する場合、このマクロを有効にする
@@ -41,6 +41,10 @@
 	//　・AES
 	//　・FMA4
 	//　・FMA3
+
+	//【注意】AVXを指定する場合、__m128 型と __m256 型でオーバーロードしている関数があるため、
+	//        GCCではコンパイルオプションに -fabi-version= 4 以上（または 0 = 最新）を指定しないと、
+	//        同じ型と見なされてオーバーロードに失敗するので注意。
 
 #endif//GASHA_IS_X86
 
