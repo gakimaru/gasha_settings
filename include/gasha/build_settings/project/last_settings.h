@@ -56,6 +56,8 @@
 
 #define GASHA_FAST_ARITH_USE_SSE2//高速演算クラスでSSE2命令を用いる場合、このマクロを有効にする（__m128d=double対応）
 
+#define GASHA_FAST_ARITH_USE_SSE4_1//高速演算クラスでSSE4.1命令を用いる場合、このマクロを有効にする（ベクトル演算の内積計算命令対応）
+
 #define GASHA_FAST_ARITH_USE_AVX//高速演算クラスでAVX命令を用いる場合、このマクロを有効にする（__m256/__m256d対応）
 
 #define GASHA_FAST_ARITH_USE_RECIPROCAL_FOR_DIVISION//高速演算クラスで除算に逆数を用いる場合、このマクロを有効にする
