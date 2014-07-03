@@ -28,7 +28,7 @@
 	//#define GASHA_USE_SSE4_1//SSE4.1命令セットを使用する場合、このマクロを有効にする
 	//#define GASHA_USE_SSE4_2//SSE4.2命令セットを使用する場合、このマクロを有効にする
 	#define GASHA_USE_POPCNT//POPCNT命令を使用する場合、このマクロを有効にする
-	#define GASHA_USE_AES//AES命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_AES//AES命令セットを使用する場合、このマクロを有効にする
 	#define GASHA_USE_AVX//AVX命令セットを使用する場合、このマクロを有効にする
 	//#define GASHA_USE_AVX2//AVX2命令セットを使用する場合、このマクロを有効にする
 	//#define GASHA_USE_FMA4//FMA4命令セット(AMD)を使用する場合、このマクロを有効にする
@@ -52,25 +52,17 @@
 //【算術設定：高速算術】
 //※ライブラリの再ビルド不要
 
-#define GASHA_FAST_DIV_FLOAT_USE_SSE//float型の高速除算にSSE命令を使用する場合、このマクロを有効にする
-                                    //※SSE1命令により、除算が高速化される。（やや精度が良い）
-                                    //※GASHA_USE_SSE が有効化されている必要がある。
+#define GASHA_FAST_ARITH_USE_SSE//高速演算クラスでSSE命令を用いる場合、このマクロを有効にする（__m128=float対応）
 
-#define GASHA_FASTEST_DIV_FLOAT_USE_SSE//float型の最高速除算にSSE命令を使用する場合、このマクロを有効にする
-                                       //※SSE1命令により、除算が高速化される。（精度が悪い）
-                                       //※GASHA_USE_SSE が有効化されている必要がある。
+#define GASHA_FAST_ARITH_USE_SSE2//高速演算クラスでSSE2命令を用いる場合、このマクロを有効にする（__m128d=double対応）
 
-#define GASHA_SEMIFAST_DIV_FLOAT_USE_SSE//float型の準高速除算にSSE命令を使用する場合、このマクロを有効にする
-                                        //※SSE1命令により、除算が高速化される。（高速除算より遅いが精度が良い ... はずが、実際には高速除算と同じ精度）
-                                        //※GASHA_USE_SSE が有効化されている必要がある。
+#define GASHA_FAST_ARITH_USE_AVX//高速演算クラスでAVX命令を用いる場合、このマクロを有効にする（__m256/__m256d対応）
 
-#define GASHA_FAST_SQRT_FLOAT_USE_SSE//float型の高速平方根にSSE命令を使用する場合、このマクロを有効にする
-                                     //※SSE1命令により、除算が高速化される。（やや精度が悪い）
-                                     //※GASHA_USE_SSE が有効化されている必要がある。
-
-#define GASHA_SEMIFAST_SQRT_FLOAT_USE_SSE//float型の準高速平方根にSSE命令を使用する場合、このマクロを有効にする
-                                         //※SSE1命令により、除算が高速化される。（高速除算より遅いが精度が良い ... はずが、実際には高速除算とほとんど同じ精度）
-                                         //※GASHA_USE_SSE が有効化されている必要がある。
+#define GASHA_FAST_ARITH_USE_RECIPROCAL_FOR_DIVISION//高速演算クラスで除算に逆数を用いる場合、このマクロを有効にする
+                                                    //※このオプションの使用は非推奨。
+                                                    //　効果が出る事もあるが、コンパイラの最適化の方が効果が大きいため、
+                                                    //　下手に逆数を使って部分的に効率化しても十分な効果が得られないことが多い。
+                                                    //※プラットフォームやコンパイラによっては効果が得られる可能性もあるため、検証が必要。
 
 //--------------------------------------------------------------------------------
 //【算術設定：CRC32】
