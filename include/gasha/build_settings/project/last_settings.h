@@ -59,12 +59,16 @@
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
 #define GASHA_FAST_ARITH_USE_SSE//高速演算クラスでSSE命令を用いる場合、このマクロを有効にする（__m128=float対応）
+                                //※GASHA_USE_SSE が有効化されている必要がある。
 
 #define GASHA_FAST_ARITH_USE_SSE2//高速演算クラスでSSE2命令を用いる場合、このマクロを有効にする（__m128d=double対応）
+                                 //※GASHA_USE_SSE2 が有効化されている必要がある。
 
 #define GASHA_FAST_ARITH_USE_SSE4_1//高速演算クラスでSSE4.1命令を用いる場合、このマクロを有効にする（ベクトル演算の内積計算命令対応）
+                                   //※GASHA_USE_SSE4_1 が有効化されている必要がある。
 
 #define GASHA_FAST_ARITH_USE_AVX//高速演算クラスでAVX命令を用いる場合、このマクロを有効にする（__m256/__m256d対応）
+                                //※GASHA_USE_AVX が有効化されている必要がある。
 
 #define GASHA_FAST_ARITH_USE_RECIPROCAL_FOR_DIVISION//高速演算クラスで除算に逆数を用いる場合、このマクロを有効にする
                                                     //※このオプションの使用は非推奨。
@@ -103,11 +107,42 @@
                                     //※CRC-32C有効化＋SSE4.2使用時は、このマクロの指定に関係なく、
                                     //　ランタイム時にはSSE命令を使用する（その方が高速）
 
+#define GASHA_CRC32_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
+
+//--------------------------------------------------------------------------------
+//【文字列設定：高速文字列】
+//※ライブラリの再ビルド必要
+
+#define GASHA_FASE_STRING_USE_SSE4_2//高速文字列処理にSSE4.2命令を使用する場合、このマクロを有効にする
+                                    //※SSE4.2命令により、文字列比較／コピー処理が高速化される。
+                                    //※GASHA_USE_SSE4_2 が有効化されている必要がある。
+
+//※コンパイラによっては効果が出ない関数もあるため、検証の上、効果のある関数だけ有効化した方が良い
+
+#define GASHA_STRLEN_FAST_USE_SSE4_2//strlen_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRNLEN_FAST_USE_SSE4_2//strnlen_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRCMP_FAST_USE_SSE4_2//strcmp_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRNCMP_FAST_USE_SSE4_2//strcmp_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRCHR_FAST_USE_SSE4_2//strchr_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRRCHR_FAST_USE_SSE4_2//strrchr_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRSTR_FAST_USE_SSE4_2//strstr_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRSTRBM_FAST_USE_SSE4_2//strstrbm_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRSTR0_FAST_USE_SSE4_2//strstr0_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRCPY_FAST_USE_SSE4_2//strcpy_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+#define GASHA_STRNCPY_FAST_USE_SSE4_2//strcpy_fast にSSE4.2命令を使用する場合、このマクロを有効にする
+
+//#define GASHA_SSE_STRNCPY_PADDING_ZERO//sse_strncpyを本来の仕様（余りを0で埋める）で実装する場合は、このマクロを有効化する
+                                        //※無効化時は、最後にターミネータを一つ付加するだけ（高速）
+
+#define GASHA_FAST_STRING_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
+
 //--------------------------------------------------------------------------------
 //【汎用ユーティリティ設定】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
 //#define GASHA_SWAP_VALUES_USE_MEMCPY//swapValues/rotateValues関数でmemcpyを使用する場合、このマクロを有効化する ※通常はムーブコンストラクタ／ムーブオペレータ使用
+
+#define GASHA_UTILITY_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【アルゴリズム設定：ソート】
