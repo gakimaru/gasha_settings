@@ -161,88 +161,75 @@
 //【マルチスレッド共有データ設定：共有プールアロケータ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_SHARED_POOL_ALLOCATOR_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_SHARED_POOL_ALLOCATOR_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_SHARED_POOL_ALLOCATOR_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【マルチスレッド共有データ設定：共有スタック】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_SHARED_STACK_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_SHARED_STACK_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_SHARED_STACK_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【マルチスレッド共有データ設定：共有キュー】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_SHARED_QUEUE_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_SHARED_QUEUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_SHARED_QUEUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【マルチスレッド共有データ設定：ロックフリープールアロケータ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_LF_POOL_ALLOCATOR_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_LF_POOL_ALLOCATOR_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_LF_POOL_ALLOCATOR_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【マルチスレッド共有データ設定：ロックフリースタック】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_LF_STACK_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_LF_STACK_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_LF_STACK_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【マルチスレッド共有データ設定：ロックフリーキュー】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_LF_QUEUE_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_LF_QUEUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_LF_QUEUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：動的配列コンテナ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_DYNAMIC_ARRAY_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_DYNAMIC_ARRAY_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_DYNAMIC_ARRAY_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：リングバッファコンテナ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_RING_BUFFER_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_RING_BUFFER_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_RING_BUFFER_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：双方向連結リストコンテナ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
-
-//#define GASHA_LINKED_LIST_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_LINKED_LIST_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 #define GASHA_LINKED_LIST_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
 #define GASHA_LINKED_LIST_ENABLE_BINARY_SEARCH//コンテナの二分探索メソッドを有効にする場合は、このマクロを有効にする
 //#define GASHA_LINKED_LIST_ENABLE_STABLE_SORT//安定ソートメソッドを有効にする場合は、このマクロを有効にする
 //#define GASHA_LINKED_LIST_USE_SHELL_SORT//通常ソートにシェルソートを使用する場合は、このマクロを有効にする（無効化時は挿入ソートを使用）
 
+//#define GASHA_LINKED_LIST_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
 //--------------------------------------------------------------------------------
 //【コンテナ設定：片方向連結リストコンテナ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
-
-//#define GASHA_SINGLY_LINKED_LIST_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_SINGLY_LINKED_LIST_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 #define GASHA_SINGLY_LINKED_LIST_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
 #define GASHA_SINGLY_LINKED_LIST_ENABLE_REVERSE_ITERATOR//リバースイテレータを有効にする場合は、このマクロを有効にする【注意】かなりの低速処理
 #define GASHA_SINGLY_LINKED_LIST_ENABLE_BINARY_SEARCH//コンテナの二分探索メソッドを有効にする場合は、このマクロを有効にする ※リバースイテレータ無効化時は無効
 //#define GASHA_SINGLY_LINKED_LIST_ENABLE_STABLE_SORT//安定ソートメソッドを有効にする場合は、このマクロを有効にする
 
+//#define GASHA_SINGLY_LINKED_LIST_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
 //--------------------------------------------------------------------------------
 //【コンテナ設定：赤黒木コンテナ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
-
-//#define GASHA_RB_TREE_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_RB_TREE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 #define GASHA_RB_TREE_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
 
@@ -251,32 +238,46 @@
 //#define GASHA_RB_TREE_USE_DEBUG_PRINT_FOR_ADD//ノード追加時のデバッグ情報表示を使用する場合は、このマクロを有効にする
 //#define GASHA_RB_TREE_USE_DEBUG_PRINT_FOR_REMOVE//ノード削除時のデバッグ情報表示を使用する場合は、このマクロを有効にする
 
+//#define GASHA_RB_TREE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
 //--------------------------------------------------------------------------------
 //【コンテナ設定：開番地法ハッシュテーブルコンテナ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_HASH_TABLE_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_HASH_TABLE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
-
 #define GASHA_HASH_TABLE_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
 #define GASHA_HASH_TABLE_ENABLE_REVERSE_ITERATOR//リバースイテレータを有効にする場合は、このマクロを有効にする
+
+//#define GASHA_HASH_TABLE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：二分ヒープコンテナ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_BINARY_HEAP_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_BINARY_HEAP_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
-
 #define GASHA_BINARY_HEAP_ENABLE_RANDOM_ACCESS_INTERFACE//コンテナのランダムアクセスインターフェースを有効にする場合は、このマクロを有効化する
 #define GASHA_BINARY_HEAP_ENABLE_REVERSE_ITERATOR//リバースイテレータを有効にする場合は、このマクロを有効にする
+
+//#define GASHA_BINARY_HEAP_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【コンテナ設定：優先度付きキューコンテナアダプタ】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_PRIORITY_QUEUE_ALLWAYS_TOGETHER_INL//.hファイルのインクルードに伴い、常に.inlファイルを自動インクルードする場合は、このマクロを有効にする
-//#define GASHA_PRIORITY_QUEUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_PRIORITY_QUEUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
+//--------------------------------------------------------------------------------
+//【シングルトンデバッグ用処理】
+//※ライブラリの再ビルド必要
+
+//#define GASHA_SINGLETON_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
+//--------------------------------------------------------------------------------
+//【シングルトンデバッグ用処理】
+//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
+
+#define GASHA_SINGLETON_DEBUG_ENABLED//シングルトンデバッグ用処理を有効にする場合は、このマクロを有効にする
+                                     //※デバッグ機能有効時（GASHA_HAS_DEBUG_FEATURE 有効時）以外は自動的に無向になる
+
+//#define GASHA_SINGLETON_DEBUG_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 #endif//GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_LAST_H
 
