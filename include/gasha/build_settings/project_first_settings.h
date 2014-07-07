@@ -1,9 +1,9 @@
 ﻿#pragma once
-#ifndef GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_FIRST_H
-#define GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_FIRST_H
+#ifndef GASHA_INCLUDED_PROJECT_FIRST_SETTINGS_H
+#define GASHA_INCLUDED_PROJECT_FIRST_SETTINGS_H
 
 //--------------------------------------------------------------------------------
-// first_settings.h
+// project_first_settings.h
 // プロジェクト固有のコンパイル設定（先行設定）
 //
 // 依存するヘッダー：（なし）
@@ -46,6 +46,6 @@
 
 #endif//GASHA_USE_NAME_SPACE
 
-#endif//GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_FIRST_H
+#endif//GASHA_INCLUDED_PROJECT_FIRST_SETTINGS_H
 
 // End of file

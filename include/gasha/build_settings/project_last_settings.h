@@ -1,9 +1,9 @@
 ﻿#pragma once
-#ifndef GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_LAST_H
-#define GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_LAST_H
+#ifndef GASHA_INCLUDED_PROJECT_LAST_SETTINGS_H
+#define GASHA_INCLUDED_PROJECT_LAST_SETTINGS_H
 
 //--------------------------------------------------------------------------------
-// last_settings.h
+// project_last_settings.h
 // プロジェクト固有のコンパイル設定（最終設定）
 //
 // 依存するヘッダー：project/first_settings.h//プロジェクト固有のビルド設定（先行設定）
@@ -34,9 +34,9 @@
 	//#define GASHA_USE_SSE4A//SSE4a命令セット(AMD)を使用する場合、このマクロを有効にする
 	//#define GASHA_USE_SSE4_1//SSE4.1命令セットを使用する場合、このマクロを有効にする
 	//#define GASHA_USE_SSE4_2//SSE4.2命令セットを使用する場合、このマクロを有効にする
-	#define GASHA_USE_POPCNT//POPCNT命令を使用する場合、このマクロを有効にする
-	#define GASHA_USE_AES//AES命令セットを使用する場合、このマクロを有効にする
-	#define GASHA_USE_AVX//AVX命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_POPCNT//POPCNT命令を使用する場合、このマクロを有効にする
+	//#define GASHA_USE_AES//AES命令セットを使用する場合、このマクロを有効にする
+	//#define GASHA_USE_AVX//AVX命令セットを使用する場合、このマクロを有効にする
 	//#define GASHA_USE_AVX2//AVX2命令セットを使用する場合、このマクロを有効にする
 	//#define GASHA_USE_FMA4//FMA4命令セット(AMD)を使用する場合、このマクロを有効にする
 	//#define GASHA_USE_FMA3//FMA3命令セット(INTEL)を使用する場合、このマクロを有効にする
@@ -295,6 +295,6 @@
 
 //#define GASHA_SINGLETON_DEBUG_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
-#endif//GASHA_INCLUDED_PROJECT_BUILD_SETTINGS_LAST_H
+#endif//GASHA_INCLUDED_PROJECT_LAST_SETTINGS_H
 
 // End of file
