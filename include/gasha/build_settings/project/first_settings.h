@@ -6,6 +6,9 @@
 // first_settings.h
 // プロジェクト固有のコンパイル設定（先行設定）
 //
+// 依存するヘッダー：（なし）
+//                   ※build_settings.h により、依存関係順にインクルード
+//
 // Gakimaru's researched and standard library for C++ - GASHA
 //   Copyright (c) 2014 Itagaki Mamoru
 //   Released under the MIT license.

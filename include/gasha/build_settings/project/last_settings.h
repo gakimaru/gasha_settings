@@ -6,6 +6,13 @@
 // last_settings.h
 // プロジェクト固有のコンパイル設定（最終設定）
 //
+// 依存するヘッダー：project/first_settings.h//プロジェクト固有のビルド設定（先行設定）
+//                   compiler_auto_settings.h//コンパイラ自動判別・設定
+//                   platform_auto_settings.h//プラットフォーム自動判別・設定
+//                   language_auto_settings.h//言語機能自動判別・設定
+//                   build_configuration.h//ビルド構成
+//                   ※build_settings.h により、依存関係順にインクルード
+//
 // Gakimaru's researched and standard library for C++ - GASHA
 //   Copyright (c) 2014 Itagaki Mamoru
 //   Released under the MIT license.
@@ -156,6 +163,15 @@
 	//#define GASHA_QUICK_SORT_USE_OPENMP//クイックソート：OpenMPを使用する場合は、このマクロを有効にする ※有効にするとかえって遅くなる
 
 #endif//_OPENMP
+
+//--------------------------------------------------------------------------------
+//【ロック設定】
+//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
+
+//#define GASHA_DEFAULT_CONTEXT_SWITH_IS_FORCE//デフォルトコンテキストスイッチで、確実なスイッチを使用する場合は、このマクロを有効にする
+//#define GASHA_DEFAULT_CONTEXT_SWITH_IS_SHORT_SLEEP//デフォルトコンテキストスイッチで、短いスリープでスイッチを使用する場合は、このマクロを有効にする
+//#define GASHA_DEFAULT_CONTEXT_SWITH_IS_YIELD//デフォルトコンテキストスイッチで、イールドを使用する場合は、このマクロを有効にする
+//※どれも指定しない場合は、ゼロスリープによるスイッチを行う
 
 //--------------------------------------------------------------------------------
 //【マルチスレッド共有データ設定：共有プールアロケータ】
