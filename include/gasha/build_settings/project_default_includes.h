@@ -3,7 +3,7 @@
 #define GASHA_INCLUDED_PROJECT_DEFAULT_INCLUDES_H
 
 //--------------------------------------------------------------------------------
-// project_default_includes.h
+// build_settings/project_default_includes.h
 // プロジェクト固有のデフォルトインクルードファイル
 //
 // 依存するヘッダー：project_first_settings.h//プロジェクト固有のビルド設定（先行設定）
@@ -13,6 +13,7 @@
 //                   build_configuration.h//ビルド構成
 //                   project_last_settings.h//プロジェクト固有のビルド設定（最終設定）
 //                   adjust_build_settings.h//ビルド設定調整
+//                   builtin_functions.h//組み込み関数・マクロ
 //                   ※build_settings.h により、依存関係順にインクルード
 //
 // Gakimaru's researched and standard library for C++ - GASHA
@@ -28,7 +29,7 @@
 //#include <gasha/limits.h>//限界値：numeric_limits<T>
 //#include <gasha/chrono.h>//時間処理：elapsedTime, nowElapsedTime()
 
-//#include <gasha/memory.h>//メモリ操作：多態new/delete
+//#include <gasha/new.h>//メモリ操作：多態new/delete
 
 //#include <cstddef>//std::size_t, std::ptrdiff_t
 //#include <cstdint>//std::intptr_t, std::uintptr_t, C++11 std::int*_t, std::uint*_t

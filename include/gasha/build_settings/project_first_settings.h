@@ -3,7 +3,7 @@
 #define GASHA_INCLUDED_PROJECT_FIRST_SETTINGS_H
 
 //--------------------------------------------------------------------------------
-// project_first_settings.h
+// build_settings/project_first_settings.h
 // プロジェクト固有のコンパイル設定（先行設定）
 //
 // 依存するヘッダー：（なし）
