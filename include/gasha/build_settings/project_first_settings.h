@@ -40,7 +40,7 @@
 	#define GASHA_NAMESPACE_BEGIN//ネームスペース開始宣言
 	#define GASHA_NAMESPACE_END//ネームスペース終了宣言
 
-	#define GASHA_USING_NAMESPACE;//ネームスペース使用宣言
+	#define GASHA_USING_NAMESPACE//ネームスペース使用宣言
 
 	#define GASHA_//ネームスペース指定
 
