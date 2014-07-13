@@ -407,10 +407,12 @@
 //【ビルド構成】
 //※ビルド構成を標準の状態から変えたい場合、ここで変更を行う
 
-//リリースビルド時もデバッグログを有効化する
+//【テスト用設定】リリースビルド時もデバッグログを有効化する場合、このマクロを有効化する（一時的な調査などの時にのみ使用する）
+#if 0
 #if !defined(GASHA_HAS_DEBUG_LOG) && defined(GASHA_BUILD_CONFIG_IS_RELEASE)//製品向け設定
 	#define GASHA_HAS_DEBUG_LOG//デバッグログ有効化
 #endif//GASHA_HAS_DEBUG_LOG
+#endif
 
 #endif//GASHA_INCLUDED_PROJECT_LAST_SETTINGS_H
 
