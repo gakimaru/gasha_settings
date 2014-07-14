@@ -438,17 +438,34 @@
 //【ログワークバッファ】
 //※ライブラリの再ビルド必要
 
-#define GASHA_LOG_WORK_BUFF_SECURE_INITIALIZE//ログワークバッファ使用時に確実にログワークバッファを初期化したい場合は、このマクロを有効にする
+#define GASHA_LOG_WORK_BUFF_SECURE_INITIALIZE//ログワークバッファ使用時に確実に初期化したい場合は、このマクロを有効にする
                                              //※ログワークバッファの明示的な初期化が不要になる。
                                              //※パフォーマンスに問題がある場合はこのマクロを無効にすること。
                                              //　その場合、最初のログワークバッファ使用前に、明示的な初期化が必要。
-
 
 //#define GASHA_LOG_WORK_BUFF_BLOCK_SIZE 2048//ログ出力用ワークバッファ一つ当たりのサイズ
 //#define GASHA_LOG_WORK_BUFF_POOL_SIZE 4//ログ出力用ワークバッファのプール数
 
 //※ GASHA_LOG_WORK_BUFF_BLOCK_SIZE が1回のログ出力時の上限サイズとなる。
 //※ GASHA_LOG_WORK_BUFF_BLOCK_SIZE * GASHA_LOG_WORK_BUFF_POOL_SIZE のサイズの固定ワークバッファが確保される。
+//※未定義時のデフォルトは adjust_build_settings.h に定義。
+
+//--------------------------------------------------------------------------------
+//【ログキュー】
+//※ライブラリの再ビルド必要
+
+#define GASHA_LOG_QUEUE_SECURE_INITIALIZE//ログキュー使用時に確実に初期化したい場合は、このマクロを有効にする
+                                         //※ログキューの明示的な初期化が不要になる。
+                                         //※パフォーマンスに問題がある場合はこのマクロを無効にすること。
+                                         //　その場合、最初のログキュー使用前に、明示的な初期化が必要。
+
+//#define GASHA_LOG_QUEUE_MESSAGE_STACK_SIZE 32768//ログキューメッセージ用スタックバッファサイズ
+//#define GASHA_LOG_QUEUE_NODE_SIZE 256//ログキュー用のノード数
+//#define GASHA_LOG_QUEUE_NOWAIT//ログのキューイングができない時にメッセージを捨てる場合は、このマクロを有効にする
+                                //※通常は、キューイング可能な状態になるまで待機する。
+
+//※ GASHA_LOG_QUEUE_MESSAGE_STACK_SIZE は、キューに保持可能なメッセージの最大合計サイズ。（スマートスタックアロケータにより、溜まっているキューが全て出力されたらクリアされる）
+//※ GASHA_LOG_QUEUE_NODE_SIZE は、同時にキューイング可能な数。
 //※未定義時のデフォルトは adjust_build_settings.h に定義。
 
 //--------------------------------------------------------------------------------
@@ -471,7 +488,7 @@
 //※ビルド構成を標準の状態から変えたい場合、ここで変更を行う
 
 //【テスト用設定】リリースビルド時もデバッグログを有効化する場合、このマクロを有効化する（一時的な調査などの時にのみ使用する）
-#if 0
+#if 1
 #if !defined(GASHA_HAS_DEBUG_LOG) && defined(GASHA_BUILD_CONFIG_IS_RELEASE)//製品向け設定
 	#define GASHA_HAS_DEBUG_LOG//デバッグログ有効化
 #endif//GASHA_HAS_DEBUG_LOG
