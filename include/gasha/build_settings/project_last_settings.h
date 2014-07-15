@@ -443,7 +443,7 @@
                                              //※パフォーマンスに問題がある場合はこのマクロを無効にすること。
                                              //　その場合、最初のログワークバッファ使用前に、明示的な初期化が必要。
 
-//#define GASHA_LOG_WORK_BUFF_BLOCK_SIZE 2048//ログ出力用ワークバッファ一つ当たりのサイズ
+//#define GASHA_LOG_WORK_BUFF_BLOCK_SIZE 4096//ログ出力用ワークバッファ一つ当たりのサイズ
 //#define GASHA_LOG_WORK_BUFF_POOL_SIZE 4//ログ出力用ワークバッファのプール数
 
 //※ GASHA_LOG_WORK_BUFF_BLOCK_SIZE が1回のログ出力時の上限サイズとなる。
