@@ -42,7 +42,7 @@
 
 	#define GASHA_USING_NAMESPACE//ネームスペース使用宣言
 
-	#define GASHA_//ネームスペース指定
+	#define GASHA_ :://ネームスペース指定
 
 #endif//GASHA_USE_NAME_SPACE
 

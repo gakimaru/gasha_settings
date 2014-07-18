@@ -23,6 +23,13 @@
 //※以下、プロジェクトの都合に合わせて設定を選択・変更して使用する。
 
 //--------------------------------------------------------------------------------
+//【全体設定：TLS設定】
+
+//#define GASHA_INCOMPLETE_TLS_INITIALIZER//TLSが正しく初期化できない環境であれば、このマクロを有効化する
+                                          //※通常、プラットフォーム設定に応じて自動的に設定されるが、強制したい場合は設定する。
+                                          //※このマクロが有効だと、TLSの初期値に 0 以外を要する一部の処理で、明示的な初期化を行うようになる。
+
+//--------------------------------------------------------------------------------
 //【全体設定：SSE命令設定】
 //※ライブラリの再ビルド必要
 
@@ -519,7 +526,7 @@
 //【ログ出力操作】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-#define GASHA_LOG_PRINT_USE_QUEUE//ログ出力操作時（print(), output() 使用時）に、ログキューを使用する場合は、このマクロを有効にする
+#define GASHA_LOG_PRINT_USE_QUEUE//ログ出力操作時（print(), put() 使用時）に、ログキューを使用する場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【シングルトンデバッグ用処理】
@@ -532,7 +539,7 @@
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
 #define GASHA_SINGLETON_DEBUG_ENABLED//シングルトンデバッグ用処理を有効にする場合は、このマクロを有効にする
-                                     //※デバッグ機能有効時（GASHA_HAS_DEBUG_FEATURE 有効時）以外は自動的に無向になる
+                                     //※デバッグ機能有効時（GASHA_DEBUG_FEATURE_IS_ENABLED 有効時）以外は自動的に無向になる
 
 //#define GASHA_SINGLETON_DEBUG_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
@@ -540,11 +547,40 @@
 //【ビルド構成】
 //※ビルド構成を標準の状態から変えたい場合、ここで変更を行う
 
-//【テスト用設定】リリースビルド時もデバッグログを有効化する場合、このマクロを有効化する（一時的な調査などの時にのみ使用する）
+//【サンプル】リリースビルド時もデバッグログを有効化する（一時的な調査に活用）
 #if 0
-#if !defined(GASHA_HAS_DEBUG_LOG) && defined(GASHA_BUILD_CONFIG_IS_RELEASE)//製品向け設定
-	#define GASHA_HAS_DEBUG_LOG//デバッグログ有効化
-#endif//GASHA_HAS_DEBUG_LOG
+#if !defined(GASHA_LOG_IS_ENABLED) && (defined(GASHA_BUILD_CONFIG_IS_LOCAL_RELEASE) || defined(GASHA_BUILD_CONFIG_IS_RELEASE))
+	#define GASHA_LOG_IS_ENABLED//デバッグログ有効化
+#endif//GASHA_LOG_IS_ENABLED
+#endif
+
+//【サンプル】リリースビルド時もアサーション／ブレークポイント／ウォッチポイントを有効化する（アサーションを有効化すると、必ずデバッグログが有効化するので注意）
+#if 0
+#if (defined(GASHA_BUILD_CONFIG_IS_LOCAL_RELEASE) || defined(GASHA_BUILD_CONFIG_IS_RELEASE))
+	#ifndef GASHA_ASSERTION_IS_ENABLED
+		#define GASHA_ASSERTION_IS_ENABLED//アサーション有効化
+	#endif
+	#ifndef GASHA_BREAKPOINT_IS_ENABLED
+		#define GASHA_BREAKPOINT_IS_ENABLED//ブレークポイント有効化
+	#endif
+	#ifndef GASHA_WATCHPOINT_IS_ENABLED
+		#define GASHA_WATCHPOINT_IS_ENABLED//ウォッチポイント有効化
+	#endif
+#endif
+#endif
+
+//【サンプル】コールポイント機能を強制的に禁止する
+#if 0
+#if defined(GASHA_CALLPOINT_IS_ENABLED)
+	#undef GASHA_CALLPOINT_IS_ENABLED//コールポイント機能有効化
+#endif//GASHA_CALLPOINT_IS_ENABLED
+#endif
+
+//【サンプル】プロファイル機能を強制的に禁止する
+#if 0
+#if defined(GASHA_PROFILE_IS_AVAILABLE)
+	#undef GASHA_PROFILE_IS_AVAILABLE//プロファイル機能利用可能
+#endif//GASHA_PROFILE_IS_AVAILABLE
 #endif
 
 #endif//GASHA_INCLUDED_PROJECT_LAST_SETTINGS_H

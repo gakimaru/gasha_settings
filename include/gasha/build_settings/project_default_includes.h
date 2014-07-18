@@ -27,7 +27,7 @@
 
 //#include <gasha/type_traits.h>//型特性ユーティリティ：extentof(), rankof(), toStr()
 //#include <gasha/limits.h>//限界値：numeric_limits<T>
-//#include <gasha/chrono.h>//時間処理：elapsedTime, nowElapsedTime()
+//#include <gasha/chrono.h>//時間処理ユーティリティ：elapsedTime, nowElapsedTime()
 
 //#include <gasha/new.h>//多態アロケータ対応標準new/delete
 
