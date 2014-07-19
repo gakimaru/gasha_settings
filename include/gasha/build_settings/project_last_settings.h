@@ -23,14 +23,24 @@
 //※以下、プロジェクトの都合に合わせて設定を選択・変更して使用する。
 
 //--------------------------------------------------------------------------------
-//【全体設定：TLS設定】
+//【全体設定：TLS】
 
 //#define GASHA_INCOMPLETE_TLS_INITIALIZER//TLSが正しく初期化できない環境であれば、このマクロを有効化する
                                           //※通常、プラットフォーム設定に応じて自動的に設定されるが、強制したい場合は設定する。
                                           //※このマクロが有効だと、TLSの初期値に 0 以外を要する一部の処理で、明示的な初期化を行うようになる。
 
 //--------------------------------------------------------------------------------
-//【全体設定：SSE命令設定】
+//【全体設定：標準入出力】
+
+#define GASHA_STDIN_IS_AVAILABLE//標準入力を使用した処理を有効化する場合、このマクロを有効化する
+
+//--------------------------------------------------------------------------------
+//【全体設定：デバッガ用ブレークポイント】
+
+#define GASHA_DEBUGGER_BREAK_IS_AVAILABLE//デバッガのブレークポイントを使用した処理を有効化する場合、このマクロを有効化する
+
+//--------------------------------------------------------------------------------
+//【全体設定：SSE命令】
 //※ライブラリの再ビルド必要
 
 #ifdef GASHA_IS_X86//x86,x64系CPUの場合のみ設定可
@@ -515,9 +525,9 @@
 //※ライブラリの再ビルド必要
 
 #define GASHA_LOG_QUEUE_MONITOR_SECURE_INITIALIZE//ログキューモニター使用時に確実に初期化したい場合は、このマクロを有効にする
-//※ログキューの明示的な初期化が不要になる。
-//※パフォーマンスに問題がある場合はこのマクロを無効にすること。
-//　その場合、最初のログキュー使用前に、明示的な初期化が必要。
+                                                 //※ログキューの明示的な初期化が不要になる。
+                                                 //※パフォーマンスに問題がある場合はこのマクロを無効にすること。
+                                                 //　その場合、最初のログキュー使用前に、明示的な初期化が必要。
 
 //#define GASHA_LOG_QUEUE_MONITOR_MAX_RETRY_COUNT 256//次のIDのキューが来ない時にリトライ（待機）する最大回数
 //※未定義時のデフォルトは adjust_build_settings.h に定義。
@@ -560,12 +570,9 @@
 	#ifndef GASHA_ASSERTION_IS_ENABLED
 		#define GASHA_ASSERTION_IS_ENABLED//アサーション有効化
 	#endif
-	#ifndef GASHA_BREAKPOINT_IS_ENABLED
-		#define GASHA_BREAKPOINT_IS_ENABLED//ブレークポイント有効化
-	#endif
-	#ifndef GASHA_WATCHPOINT_IS_ENABLED
-		#define GASHA_WATCHPOINT_IS_ENABLED//ウォッチポイント有効化
-	#endif
+	#ifdef GASHA_DEBUGGER_BREAK_IS_AVAILABLE//デバッガ用ブレークポイントは無効化する
+		#undef GASHA_DEBUGGER_BREAK_IS_AVAILABLE
+	#endif//GASHA_DEBUGGER_BREAK_IS_AVAILABLE
 #endif
 #endif
 
