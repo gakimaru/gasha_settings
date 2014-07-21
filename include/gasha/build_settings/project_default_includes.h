@@ -31,6 +31,10 @@
 
 //#include <gasha/new.h>//多態アロケータ対応標準new/delete
 
+//#include <gasha/print.h>//ログ出力操作
+//#include <gasha/assert.h>//アサーション／ブレークポイント／ウォッチポイント
+//#include <gasha/simple_assert.h>//シンプルアサーション／ブレークポイント／ウォッチポイント
+
 //#include <cstddef>//std::size_t, std::ptrdiff_t
 //#include <cstdint>//std::intptr_t, std::uintptr_t, C++11 std::int*_t, std::uint*_t
 
