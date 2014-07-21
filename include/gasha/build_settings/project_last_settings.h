@@ -32,14 +32,23 @@
 //          本当に適用して良いか、きちんとプロジェクトの方針を固めてから使用すること。
 
 #define GASHA_ENABLE_POLY_ALLOCATOR//多態アロケータおよびそれを適用した標準new/deleteを有効にする場合は、このマクロを有効にする。
-//※無効化しても多態アロケータの操作は可能だが、静的メンバーが削除され、何の効果も無い状態になる。
+                                   //※無効化しても多態アロケータの操作は可能だが、静的メンバーが削除され、何の効果も無い状態になる。
 
 //--------------------------------------------------------------------------------
 //【重要設定】
 //【デバッガ用ブレークポイント割り込み】
+//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
 #define GASHA_DEBUGGER_BREAK_IS_AVAILABLE//デバッガのブレークポイントを使用した処理を有効化する場合、このマクロを有効化する
                                          //※ビルド構成で開発ツール／アサーションが無効な場合は、同時に無効化される
+
+//--------------------------------------------------------------------------------
+//【重要設定】
+//【ログ出力操作】
+//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
+
+//#define GASHA_LOG_PRINT_USE_QUEUE//ログ出力操作時（print(), put(), GASHA_ASSERT(), GASHA_BREADPOINT(), GASHA_WATCHPOINT() 使用時）に、
+                                 //ログキューを使用する場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
 //【シンプルアサーション／ブレークポイント／ウォッチポイント】
@@ -482,8 +491,8 @@
                                         //※パフォーマンスに問題がある場合はこのマクロを無効にすること。
                                         //　その場合、最初のログレベルマスク使用前に、明示的な初期化が必要。
 
-//#define GASHA_DEFAULT_LOG_MASK_OF_LOG 1//デフォルトのログレベルマスク
-//#define GASHA_DEFAULT_LOG_MASK_OF_NOTICE 4//デフォルトの画面通知ログレベルマスク
+//#define GASHA_DEFAULT_LOG_MASK_OF_LOG 3//デフォルトのログレベルマスク
+//#define GASHA_DEFAULT_LOG_MASK_OF_NOTICE 9//デフォルトの画面通知ログレベルマスク
 
 //※それぞれ変更したい場合、このマクロを任意に設定する。
 //※未定義時のデフォルトは adjust_build_settings.h に定義。
@@ -559,12 +568,6 @@
 //※未定義時のデフォルトは adjust_build_settings.h に定義。
 
 //--------------------------------------------------------------------------------
-//【ログ出力操作】
-//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
-
-#define GASHA_LOG_PRINT_USE_QUEUE//ログ出力操作時（print(), put() 使用時）に、ログキューを使用する場合は、このマクロを有効にする
-
-//--------------------------------------------------------------------------------
 //【プロファイラー】
 //※ライブラリの再ビルド必要
 
@@ -599,9 +602,17 @@
 //※ビルド構成を標準の状態から変えたい場合、ここで変更を行う
 
 //【サンプル】リリースビルド時もデバッグログを有効化する（一時的な調査に活用）
-#if 0
-#if !defined(GASHA_LOG_IS_ENABLED) && (defined(GASHA_BUILD_CONFIG_IS_LOCAL_RELEASE) || defined(GASHA_BUILD_CONFIG_IS_RELEASE))
-	#define GASHA_LOG_IS_ENABLED//デバッグログ有効化
+#if 1
+#if (defined(GASHA_BUILD_CONFIG_IS_LOCAL_RELEASE) || defined(GASHA_BUILD_CONFIG_IS_RELEASE))
+	#ifndef GASHA_LOG_IS_ENABLED
+		#define GASHA_LOG_IS_ENABLED//デバッグログ有効化
+	#endif//GASHA_LOG_IS_ENABLED
+	#ifndef GASHA_CALLPOINT_IS_ENABLED
+		#define GASHA_CALLPOINT_IS_ENABLED//コールポイント機能有効化
+	#endif//GASHA_CALLPOINT_IS_ENABLED
+	#ifndef GASHA_PROFILE_IS_AVAILABLE
+		#define GASHA_PROFILE_IS_AVAILABLE//プロファイル機能利用可能
+	#endif//GASHA_PROFILE_IS_AVAILABLE
 #endif//GASHA_LOG_IS_ENABLED
 #endif
 
@@ -624,9 +635,9 @@
 #endif//GASHA_CALLPOINT_IS_ENABLED
 #endif
 
-//【サンプル】プロファイル機能を強制的に禁止する
+//【サンプル】開発ツール有効化時はプロファイル機能を強制的に禁止する
 #if 0
-#if defined(GASHA_PROFILE_IS_AVAILABLE)
+#if defined(GASHA_PROFILE_IS_AVAILABLE) && defined(GASHA_DEV_TOOLS_IS_AVAILABLE)
 	#undef GASHA_PROFILE_IS_AVAILABLE//プロファイル機能利用可能
 #endif//GASHA_PROFILE_IS_AVAILABLE
 #endif
