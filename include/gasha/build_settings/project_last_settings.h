@@ -222,10 +222,11 @@
 //【ロック】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
-//#define GASHA_DEFAULT_CONTEXT_SWITH_IS_FORCE//デフォルトコンテキストスイッチで、確実なスイッチを使用する場合は、このマクロを有効にする
+//#define GASHA_DEFAULT_CONTEXT_SWITH_IS_ZERO_SLEEP//デフォルトコンテキストスイッチで、ゼロスリープでスイッチを使用する場合は、このマクロを有効にする
 //#define GASHA_DEFAULT_CONTEXT_SWITH_IS_SHORT_SLEEP//デフォルトコンテキストスイッチで、短いスリープでスイッチを使用する場合は、このマクロを有効にする
-//#define GASHA_DEFAULT_CONTEXT_SWITH_IS_YIELD//デフォルトコンテキストスイッチで、イールドを使用する場合は、このマクロを有効にする
-//※どれも指定しない場合は、ゼロスリープによるスイッチを行う
+//#define GASHA_DEFAULT_CONTEXT_SWITH_IS_FORCE//デフォルトコンテキストスイッチで、確実なスイッチを使用する場合は、このマクロを有効にする
+//#define GASHA_DEFAULT_CONTEXT_SWITH_IS_YIELD//デフォルトコンテキストスイッチで、イールドを使用する場合は、このマクロを有効にする（優先度の同じスレッドにしか処理を渡さないので注意）
+//※どれも指定しない場合は、GASHA_DEFAULT_CONTEXT_SWITH_IS_SHORT_SLEEP がデフォルト
 
 //--------------------------------------------------------------------------------
 //【スタックアロケータ】
