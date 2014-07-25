@@ -13,7 +13,7 @@
 //                   build_configuration.h//ビルド構成
 //                   ※build_settings.h により、依存関係順にインクルード
 //
-// Gakimaru's researched and standard library for C++ - GASHA
+// Gakimaru's standard library for C++ - GASHA
 //   Copyright (c) 2014 Itagaki Mamoru
 //   Released under the MIT license.
 //     https://github.com/gakimaru/gasha_settings/blob/master/LICENSE
