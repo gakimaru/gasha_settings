@@ -444,6 +444,39 @@
 //#define GASHA_PRIORITY_QUEUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
 
 //--------------------------------------------------------------------------------
+//【シングルトンデバッグ用処理】
+//※ライブラリの再ビルド必要
+
+//#define GASHA_SINGLETON_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
+//--------------------------------------------------------------------------------
+//【シングルトンデバッグ用処理】
+//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
+
+#define GASHA_SINGLETON_DEBUG_ENABLED//シングルトンデバッグ用処理を有効にする場合は、このマクロを有効にする
+//※デバッグ機能有効時（GASHA_DEBUG_FEATURE_IS_ENABLED 有効時）以外は自動的に無向になる
+
+//#define GASHA_SINGLETON_DEBUG_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
+//--------------------------------------------------------------------------------
+//【名前付きデータ参照】
+//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
+
+//#define GASHA_NAMED_REF_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
+//--------------------------------------------------------------------------------
+//【名前付き関数】
+//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
+
+//#define GASHA_NAMED_FUNC_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
+//--------------------------------------------------------------------------------
+//【名前付き定数】
+//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
+
+//#define GASHA_NAMED_VALUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+
+//--------------------------------------------------------------------------------
 //【文字列プール】
 //※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
 
@@ -602,44 +635,23 @@
                                             //※非スレッドセーフにすると、マルチスレッドでの動作を保証しない代わりに、シングルスレッドの処理が速くなる。
 
 //--------------------------------------------------------------------------------
-//【シングルトンデバッグ用処理】
-//※ライブラリの再ビルド必要
+//【ユニットテスト】
 
-//#define GASHA_SINGLETON_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
-
-//--------------------------------------------------------------------------------
-//【シングルトンデバッグ用処理】
-//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
-
-#define GASHA_SINGLETON_DEBUG_ENABLED//シングルトンデバッグ用処理を有効にする場合は、このマクロを有効にする
-                                     //※デバッグ機能有効時（GASHA_DEBUG_FEATURE_IS_ENABLED 有効時）以外は自動的に無向になる
-
-//#define GASHA_SINGLETON_DEBUG_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
-
-//--------------------------------------------------------------------------------
-//【名前付きデータ参照】
-//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
-
-//#define GASHA_NAMED_REF_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
-
-//--------------------------------------------------------------------------------
-//【名前付き関数】
-//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
-
-//#define GASHA_NAMED_FUNC_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
-
-//--------------------------------------------------------------------------------
-//【名前付き定数】
-//※ライブラリの再ビルド不要（ただし、ライブラリ内で使用している可能性があるため、できるだけ再ビルドした方が良い）
-
-//#define GASHA_NAMED_VALUE_ALLWAYS_TOGETHER_CPP_H//.hファイルのインクルードに伴い、常に.cpp.hファイル（および.inlファイル）を自動インクルードする場合は、このマクロを有効にする
+//#define GASHA_UNIT_TEST_REGIST_NUM_MAX (1024)//ユニットテストの最大登録数
+//#define GASHA_UNIT_TEST_ALLOCATOR_SIZE (2 * 1024)//ユニットテスト実行用のメモリアロケータサイズ
+//#define GASHA_UNIT_TEST_STR_POOL_TABLE_SIZE (1024)//ユニットテスト登録の最大文字列数
+//#define GASHA_UNIT_TEST_STR_POOL_BUFF_SIZE (4 * 1024)//ユニットテスト登録の最大文字列バッファサイズ
+//#define GASHA_UNIT_TEST_WORK_BUFF_SIZE (1 * 1024)//ユニットテスト結果表示用のワークバッファサイズ
+//#define GASHA_UNIT_TEST_AUTO_RUN_TARGET_MODULE nullptr//ユニットテスト自動実行時の対象モジュール ※省略時は全モジュール
+//#define GASHA_UNIT_TEST_AUTO_RUN_TARGET_GROUP 0//ユニットテスト自動実行時の対象グループ ※省略時は全グループ
+//※未定義時のデフォルトは adjust_build_settings.h に定義。
 
 //--------------------------------------------------------------------------------
 //【ビルド構成】
 //※ビルド構成を標準の状態から変えたい場合、ここで変更を行う
 
 //【サンプル】リリースビルド時もデバッグログを有効化する（一時的な調査に活用）
-#if 1
+#if 0
 #if (defined(GASHA_BUILD_CONFIG_IS_LOCAL_RELEASE) || defined(GASHA_BUILD_CONFIG_IS_RELEASE))
 	#ifndef GASHA_LOG_IS_ENABLED
 		#define GASHA_LOG_IS_ENABLED//デバッグログ有効化
@@ -650,7 +662,25 @@
 	#ifndef GASHA_PROFILE_IS_AVAILABLE
 		#define GASHA_PROFILE_IS_AVAILABLE//プロファイル機能利用可能
 	#endif//GASHA_PROFILE_IS_AVAILABLE
-#endif//GASHA_LOG_IS_ENABLED
+#endif//GASHA_BUILD_CONFIG_IS_***RELEASE
+#endif
+
+//【サンプル】リリースビルド時もユニットテストを有効化する（一時的な調査に活用）
+#if 0
+#if (defined(GASHA_BUILD_CONFIG_IS_LOCAL_RELEASE) || defined(GASHA_BUILD_CONFIG_IS_RELEASE))
+	#ifndef GASHA_UNIT_TEST_ENABLED
+		#define GASHA_UNIT_TEST_ENABLED//ユニットテスト組み込み
+	#endif//GASHA_UNIT_TEST_ENABLED
+#endif//GASHA_BUILD_CONFIG_IS_***RELEASE
+#endif
+
+//【サンプル】常にユニットテストの自動実行を有効化する（一時的な調査に活用）
+#if 0
+#ifdef GASHA_UNIT_TEST_ENABLED
+	#ifndef GASHA_UNIT_TEST_AUTO_RUN_ENABLED
+		#define GASHA_UNIT_TEST_AUTO_RUN_ENABLED//ユニットテスト自動実行
+	#endif//GASHA_UNIT_TEST_AUTO_RUN_ENABLED
+#endif//GASHA_UNIT_TEST_ENABLED
 #endif
 
 //【サンプル】リリースビルド時もアサーション／ブレークポイント／ウォッチポイントを有効化する（アサーションを有効化すると、必ずデバッグログが有効化するので注意）
